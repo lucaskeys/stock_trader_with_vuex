@@ -4,10 +4,11 @@ import VueRouter from 'vue-router'
 import {routes} from './routes';
 import store from './store/store'
 
-Vue.filter('currency', (value) => {
-  
-})
 Vue.use(VueRouter);
+
+Vue.filter('currency', (value) => {
+  return '$' + value.toLocaleString();
+})
 
 const router = new VueRouter({
   mode: 'history',
